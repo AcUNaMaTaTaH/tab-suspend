@@ -6,7 +6,6 @@
         const params = new URLSearchParams(raw);
 
         return {
-            id: params.get('id') || '',
             url: params.get('url') || '',
             title: params.get('title') || 'Suspended',
             favicon: params.get('favicon') || ''
