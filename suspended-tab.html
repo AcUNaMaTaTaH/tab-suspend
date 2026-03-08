@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
-    <title>Suspended</title>
+    <title>💤 Suspended</title>
     <link id="favicon" rel="icon" href="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -34,13 +33,16 @@
             position: relative;
             z-index: 2;
             border-radius: 10px;
+            backdrop-filter: blur(3px);
         }
 
         #content {
             position: relative;
             z-index: 2;
             text-align: center;
-            padding-top: 20vh;
+            padding-top: 14vh;
+            padding-left: 16px;
+            padding-right: 16px;
         }
 
         a {
@@ -50,25 +52,23 @@
         }
 
         #backdrop {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            position: fixed;
+            inset: 0;
             background: #121212;
             z-index: 1;
         }
 
         .preview {
             margin: 2rem auto 0;
-            width: 500px;
-            max-width: 90vw;
-            height: auto;
+            width: 640px;
+            max-width: 92vw;
             aspect-ratio: 16 / 9;
             background-size: cover;
-            background-position: center;
+            background-position: center top;
             background-repeat: no-repeat;
-            border-radius: 8px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.35);
         }
 
         kbd2 {
@@ -90,7 +90,6 @@
         }
     </style>
 </head>
-
 <body>
     <div id="backdrop"></div>
 
@@ -100,7 +99,7 @@
         <div class="overlay">
             <h2>This tab is suspended.</h2>
             <p><a id="restoreLink" href="#">Click to restore</a></p>
-            <span id="suspendShortcut">Or press <kbd2>ENTER</kbd2></span>
+            <span id="suspendShortcut">Or press <kbd2>ENTER</kbd2> or <kbd2>CTRL + ALT + S</kbd2></span>
         </div>
 
         <div id="screenshotPreview" class="preview"></div>
@@ -108,5 +107,4 @@
 
     <script src="suspended.js"></script>
 </body>
-
 </html>
