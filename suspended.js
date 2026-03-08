@@ -43,7 +43,7 @@
     }
 
     if (suspendShortcut) {
-        suspendShortcut.innerHTML = 'Or press <kbd2>ENTER</kbd2> or <kbd2>CTRL + ALT + S</kbd2>';
+        suspendShortcut.innerHTML = 'Press <kbd2>ENTER</kbd2> or <kbd2>CTRL + ALT + S</kbd2> to restore';
     }
 
     document.addEventListener('keydown', function (e) {
